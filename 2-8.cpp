@@ -9,7 +9,8 @@ int main()
     int a;
     cin >> a;
     if (a < 0)cout << "该数不存在平方根";
-    if (a >= 0)
+    if (a==0)cout<<"该数的平方根为："<<0;
+    if (a > 0)
     {
         double g = 1.0;
         for (;;)
@@ -20,7 +21,7 @@ int main()
             g = (g + a / g) / 2;
             if (temp - g<1e-10 && temp - g>-1e-10)
             {
-                cout <<setprecision(14) <<g;
+                cout <<setprecision(14) <<"该数的平方根为："<<g;
                 break;
             }
         }
