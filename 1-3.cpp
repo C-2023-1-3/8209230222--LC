@@ -1,19 +1,18 @@
-﻿// 2.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
+﻿// 3.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
 
-#include <iostream>
+#include<iostream>
 using namespace std;
 int main()
 {
-    int r, h;
-    const float pai = 3.14;
-    cout << "请输入该圆锥底的半径：";
-    cin >> r;
-    cout << "请输入该圆锥的高：";
-    cin >> h;
-    cout <<"该圆锥的体积为：" << pai * r * r * h / 3 << endl;
-    return 0;
+	cout << "char length:" << sizeof(char) << endl;
+	cout << "int length:" << sizeof(int) << endl;
+	cout << "bool length:" << sizeof(bool) << endl;
+	cout << "float length:" << sizeof(float) << endl;
+	cout << "double length:" << sizeof(double) << endl;
+	cout << "long length:" << sizeof(long) << endl;
 }
+
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
 // 调试程序: F5 或调试 >“开始调试”菜单

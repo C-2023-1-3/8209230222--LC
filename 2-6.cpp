@@ -1,17 +1,33 @@
-﻿// 2.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
+﻿// 2-6.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
+
+
 
 #include <iostream>
 using namespace std;
 int main()
 {
-    int r, h;
-    const float pai = 3.14;
-    cout << "请输入该圆锥底的半径：";
-    cin >> r;
-    cout << "请输入该圆锥的高：";
-    cin >> h;
-    cout <<"该圆锥的体积为：" << pai * r * r * h / 3 << endl;
+    int i, j;
+    cout << "i=";
+    cin >> i;
+    cout << "j=";
+    cin >> j;
+    for (int a = i < j ? i : j;;a--)
+    {
+        if(i%a==0&&j%a==0)
+        {
+            cout << "i与j的最大公约数是："<<a<<endl;
+            break;
+        }
+    }
+    for (int a = i > j ? i : j;;a++)
+    {
+        if (a % i == 0 && a % j == 0)
+        {
+            cout <<"i与j的最小公倍数是："<< a;
+            break;
+        }
+    }
     return 0;
 }
 

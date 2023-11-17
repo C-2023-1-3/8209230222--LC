@@ -1,17 +1,19 @@
-﻿// 2.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
+﻿// 2-3.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
 
 #include <iostream>
 using namespace std;
 int main()
 {
-    int r, h;
-    const float pai = 3.14;
-    cout << "请输入该圆锥底的半径：";
-    cin >> r;
-    cout << "请输入该圆锥的高：";
-    cin >> h;
-    cout <<"该圆锥的体积为：" << pai * r * r * h / 3 << endl;
+    int i,j, k;
+    cout << "请输入三角形三边边长：";
+    cin >>i>> j >> k;
+    if (i > 0 && j > 0 && k > 0 && i < j + k && j < i + k && k < i + j) {
+        cout << "该三角形周长为：" << i + j + k << endl;
+        if (i == j || j == k || i == k)cout << "该三角形为等腰三角形";
+        if (i != j && j != k && i != k)cout << "该三角形不为等腰三角形";
+    }
+    else cout << "不能构成三角形";
     return 0;
 }
 

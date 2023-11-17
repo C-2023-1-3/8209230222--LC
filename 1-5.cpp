@@ -1,18 +1,16 @@
-﻿// 2.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
+﻿// 1-5.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
 
 #include <iostream>
 using namespace std;
 int main()
 {
-    int r, h;
-    const float pai = 3.14;
-    cout << "请输入该圆锥底的半径：";
-    cin >> r;
-    cout << "请输入该圆锥的高：";
-    cin >> h;
-    cout <<"该圆锥的体积为：" << pai * r * r * h / 3 << endl;
-    return 0;
+	float hua;
+	cout << "请输入目前的华氏温度：";
+	cin >> hua;
+	cout << "当前摄氏度为：" << (hua-32)/1.8;
+	cout << "°C" << endl;
+	return 0;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单

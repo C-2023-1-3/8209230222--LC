@@ -1,17 +1,30 @@
-﻿// 2.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
+﻿// 2-8.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
 
 #include <iostream>
+#include<iomanip>
 using namespace std;
 int main()
 {
-    int r, h;
-    const float pai = 3.14;
-    cout << "请输入该圆锥底的半径：";
-    cin >> r;
-    cout << "请输入该圆锥的高：";
-    cin >> h;
-    cout <<"该圆锥的体积为：" << pai * r * r * h / 3 << endl;
+    int a;
+    cin >> a;
+    if (a < 0)cout << "该数不存在平方根";
+    if (a >= 0)
+    {
+        double g = 1.0;
+        for (;;)
+        {
+
+            double temp;
+            temp = g;
+            g = (g + a / g) / 2;
+            if (temp - g<1e-10 && temp - g>-1e-10)
+            {
+                cout <<setprecision(14) <<g;
+                break;
+            }
+        }
+    }
     return 0;
 }
 
